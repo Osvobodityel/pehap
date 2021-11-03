@@ -50,14 +50,17 @@ echo "sortowanie po kluczach<br>";
 ksort($auto);
 print_r($auto);*/
 
-function tabelka() {
+function tabelka($a,$b) {
+	$w=0;
 	for ($i=0; $i < 100; $i++) { 
-		$tab[]=rand(1,100);
-		for ($x=0; $x < 100; $x++) { 
-			echo $tab[];
-		}
+		$tab[]=rand($a,$b);
+		echo $tab[$i].",";
+		$w+=$tab[$i];
+
 	}
+	echo "=".$w;
 }
+tabelka(2,100);
 
 
 
